@@ -34,6 +34,8 @@ main {
     justify-content: space-around;
     margin-right: 122px;
     margin-left: 122px;
+    position: relative;
+    
 }
 
 main img{
@@ -53,7 +55,14 @@ main img{
     height: 146px;
     margin-left: 34px;
     margin-bottom: 34px;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
     
+}
+
+.cartaTras{
+    transform: rotateY(180deg);
 }
 
 /*Ajustes para páginas menores*/
