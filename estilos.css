@@ -1,0 +1,75 @@
+/*Geral*/
+* {
+    box-sizing: border-box;
+}
+
+/*Corpo do layout*/
+body {
+    background-color: #EEF9BF;
+}
+
+/*Classe que contem todos os elementos da página*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Ajustando o texto do título*/
+header h1{
+    font-family: 'Roboto', sans-serif;
+    color: #75B79E;
+    font-size: 56px;
+    line-height: 66px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 47px;
+}
+
+/*Classe que contem os principais elementos da página (cartas)*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 122px;
+    margin-left: 122px;
+}
+
+main img{
+    width: 100px;
+    height: 100px;
+}
+
+/*Classe que contem os envoltório das cartas*/
+.corpoCarta {
+    display: flex;
+    align-items: center;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 117px;
+    height: 146px;
+    margin-left: 34px;
+    margin-bottom: 34px;
+    
+}
+
+/*Ajustes para páginas menores*/
+@media screen and (max-width: 614px){
+
+    header {
+        width: 75%;
+    }
+
+    header h1{
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .corpoCarta {
+        margin-left: 0;
+    }
+
+}
