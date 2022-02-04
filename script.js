@@ -13,7 +13,7 @@ let arrayCartas = [];
 
 for (let i = 0; i < qteCartas; i++) {
     /* qteCartasJogo += '<div id="carta'+i+'" class="corpoCarta" onclick="rodarCarta()"></div>'; */
-    qteCartasJogo += `<div id =carta${i} class="card" onclick="testeClicar(this) data-identifier="card"">
+    qteCartasJogo += `<div id =carta${i} class="card" onclick="testeClicar(this)" data-identifier="card">
                             <div class="front-face face" data-identifier="front-face">
                             <img src='imagens/front 1.png' alt='Frente da carta - papagaio'>
                             </div>
@@ -72,11 +72,12 @@ let armazenaCartas = [null, null];
 let armazenaId = [null, null];
 let infoPar = false;
 let contJogadas = 0;
+let contador = document.querySelector(".NoJogadas");
 
 function testeClicar(card) {
     // Assim tenho o índice da carta clicada
     let numCard = parseFloat(card.id.replace('carta', '')); // Número das divs que contem as cartas
-
+    contador.innerHTML = `Quantidade de jogadas: ${contJogadas + 1}`;
     if (verificaCartas[numCard] == true && infoPar == false) {
 
         virarCarta(card);
@@ -138,6 +139,7 @@ function testeClicar(card) {
                 console.log(verificaCartas); */
     }
 }
+
 
 function virarCarta(card) {
     let front = card.querySelector(".front-face");
@@ -204,9 +206,11 @@ let imgBack = [];
 let backFace = document.querySelectorAll(".back-face");
 
 for (let i = 0; i < qteCartas; i++) {
-    imgBack[i] = '<img src=imagens/back' + indiceCartas[i] + '.png>'
+    imgBack[i] = '<img src=imagens/back' + indiceCartas[i] + '.gif>'
     backFace[i].innerHTML = imgBack[i];
 }
+
+console.log(indiceCartas);
 
 // desvirar as duas cartas depois que a segunda foi aberta se os índices não forem iguais
 // Clicou na carta... Viu quem virou, pegou o id dela... Com o id consigo saber qual carta é a virada
