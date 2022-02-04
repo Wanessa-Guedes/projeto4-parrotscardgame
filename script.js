@@ -13,11 +13,11 @@ let arrayCartas = [];
 
 for (let i = 0; i < qteCartas; i++) {
     /* qteCartasJogo += '<div id="carta'+i+'" class="corpoCarta" onclick="rodarCarta()"></div>'; */
-    qteCartasJogo += `<div id =carta${i} class="card" onclick="testeClicar(this)">
-                            <div class="front-face face">
+    qteCartasJogo += `<div id =carta${i} class="card" onclick="testeClicar(this) data-identifier="card"">
+                            <div class="front-face face" data-identifier="front-face">
                             <img src='imagens/front 1.png' alt='Frente da carta - papagaio'>
                             </div>
-                            <div class="back-face face">
+                            <div class="back-face face" data-identifier="back-face">
                             </div>
                     </div>`;
     arrayCartas += i;
