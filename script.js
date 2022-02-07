@@ -12,10 +12,10 @@ let qteCartasJogo = "";
 
 for (let i = 0; i < qteCartas; i++) {
     qteCartasJogo += `<div id =carta${i} class="card" onclick="clicar(this)" data-identifier="card">
-                            <div class="front-face face" data-identifier="front-face">
+                            <div class="front-face face" data-identifier="back-face">
                             <img src='imagens/front 1.png' alt='Frente da carta - papagaio'>
                             </div>
-                            <div class="back-face face" data-identifier="back-face">
+                            <div class="back-face face" data-identifier="front-face">
                             </div>
                     </div>`;
 }
